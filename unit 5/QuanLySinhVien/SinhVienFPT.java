@@ -8,16 +8,6 @@ abstract public class SinhVienFPT {
 	public String hoten;
 	public String nghanhhoc;
 	
-	public SinhVienFPT() {
-		
-	}
-	
-	public SinhVienFPT(String hoten, String nghanhhoc) {
-		this.hoten = hoten;
-		this.nghanhhoc = nghanhhoc;
-	}
-
-
 	Scanner sc = new Scanner (System.in);
 	
 	public void nhap() {
@@ -26,27 +16,25 @@ abstract public class SinhVienFPT {
 		System.out.println(" nhap nghanh hoc : ");
 		nghanhhoc = sc.nextLine();
 	}
-	abstract public double getDiem() ;
-	
+	abstract public double getdiem() ;
 	
 	public String gethocLuc() {
-		
-		if(getDiem() < 5) {
-			return "Yeu";
+		if(getdiem() <5) {
+			System.out.println(" xep loai : Yeu ");
 		}
-		else if(getDiem() < 6.5){
-			return " Trung Binh ";
+		else if(getdiem() >=5 && getdiem()< 6.5){
+			System.out.println(" xep loai : Trung Binh ");
 		}
-		else if(getDiem() < 7.5){
-			return "Tien Tien ";
+		else if(getdiem() >= 6.5 && getdiem()< 7.5){
+			System.out.println(" xep loai : Tien Tien ");
 		}
-		else if (getDiem() < 9){
-			return " Gioi ";
+		else if (getdiem() >= 7.5 && getdiem()<= 9){
+			System.out.println(" sep loai : Gioi ");
 		}
 		else {
-			return " Xuat Sac";
+			System.out.println(" xep loai : Xuat Sat");
 		}
-		
+		return null;
 	}	
 	
 	public void xuat() {

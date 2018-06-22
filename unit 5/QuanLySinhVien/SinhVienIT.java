@@ -10,22 +10,8 @@ public class SinhVienIT extends SinhVienFPT{
 	
 	Scanner sc = new Scanner(System.in);
 	
-	
-	public SinhVienIT() {
-		
-	}
-	
-	public SinhVienIT(double diemjava, double diemhtml, double diemcss, double diemtb) {
-		
-		this.diemjava = diemjava;
-		this.diemhtml = diemhtml;
-		this.diemcss = diemcss;
-		this.diemtb = diemtb;
-	}
-
-	@Override            // ghi de phuong thuc
-	public void nhap() {
-		super.nhap();
+	@Override
+	public double getdiem() {
 		System.out.print(" nhap diem java : ");
 		diemjava = Double.parseDouble(sc.nextLine());
 		System.out.print(" nhap diem html : ");
@@ -33,19 +19,14 @@ public class SinhVienIT extends SinhVienFPT{
 		System.out.print(" nhap diem css : ");
 		diemcss = Double.parseDouble(sc.nextLine());
 		
-	}
-	@Override
-	public void xuat() {
-		super.xuat();
-		System.out.println(" diem trung binh : "+diemtb);
-		System.out.println(" xep loai : "+gethocLuc());
-	}
-	@Override
-	public double getDiem() {
-		
 		diemtb = (2*diemjava + diemhtml + diemcss)/4;
 		return diemtb ;
 	
 	}
-	
+	public static void main(String[] args) {
+		SinhVienIT it = new SinhVienIT();
+		it.nhap();
+		it.getdiem();
+		it.gethocLuc();
+	}
 }
