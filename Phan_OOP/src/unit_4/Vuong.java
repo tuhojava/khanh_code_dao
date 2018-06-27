@@ -1,4 +1,4 @@
-package MT_1_OOP;
+package unit_4;
 
 public class Vuong extends ChuNhat{
 	public int canh ;
@@ -26,7 +26,6 @@ public class Vuong extends ChuNhat{
 	public static void main(String[] args) {
 		Vuong  v = new Vuong();
 		v.nhap();
-		
 		v.getchuvi();
 		v.getdientich();
 		v.xuat();

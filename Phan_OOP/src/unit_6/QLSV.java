@@ -1,4 +1,4 @@
-package MT_1_OOP;
+package unit_6;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +9,7 @@ public class QLSV extends SuLyNgoaiLe{
 	private int age;
 	
 
-	private String id;
+	private static String id;
 	private String address;
 	private double gpa;
 	
@@ -155,8 +155,13 @@ public class QLSV extends SuLyNgoaiLe{
 					for(int i =0; i<Array.length; i++){    
 						QLSV sv = new QLSV();      // 1 vong lap se tao ra 1 o nho
 						System.out.println(" thong tin sinh vien thu : "+(i+1));
+						
 						sv.nhap();                            // doi tuong do se duoc phuong thuc nhapTT tiep don
+						
 						danhsachsv.add(sv);                      // sau khi da co thong tin roi thi phai luu lai
+						if(id .equals(danhsachsv.get(i).getId())) {
+							System.out.println(" ban khong duoc nhap id trung nhau ");
+						}
 					}
 					break;
 				}
